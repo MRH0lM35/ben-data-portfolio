@@ -1,0 +1,10 @@
+Name,Email,Source
+Alice Smith,alice@example.com,signup
+,bob@example.com,import
+Charlie Ray,,signup
+Alice Smith,alice@example.com,signup
+Dana Wu,dana@example.com,import
+,,webform
+Frank Lee,frank@example.com,
+George Hill,george@example.com,signup
+,hannah@example.com,import
