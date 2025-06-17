@@ -1,6 +1,6 @@
 # ben-data-portfolio
 
-Data cleaning and visualization projects showcasing Python and Tableau skills focused on CRM datasets.
+Data cleaning and visualisation projects showcasing Python and Tableau skills focused on CRM datasets.
 
 ---
 
