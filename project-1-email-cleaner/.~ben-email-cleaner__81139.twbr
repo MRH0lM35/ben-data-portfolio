@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='contacts_messy' inline='true' name='federated.0v2626b07yr9ba1gkqjsq00tonet' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='contacts_messy' name='textscan.1u9xqri0q0uevo19qg38d0tblp3c'>
+            <connection class='textscan' directory='/Users/benphillips/Documents/ben-data-portfolio/project-1-email-cleaner/tableau-datasets' filename='contacts_messy.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1u9xqri0q0uevo19qg38d0tblp3c' name='contacts_messy.csv' table='[contacts_messy#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='Name' ordinal='0' />
+            <column datatype='string' name='Email' ordinal='1' />
+            <column datatype='string' name='Source' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[contacts_messy.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[contacts_messy.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Email</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Email]</local-name>
+            <parent-name>[contacts_messy.csv]</parent-name>
+            <remote-alias>Email</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Source]</local-name>
+            <parent-name>[contacts_messy.csv]</parent-name>
+            <remote-alias>Source</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Email Status' datatype='string' name='[Calculation_5597200302460637184]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF ISNULL([Email]) OR [Email] = &quot;&quot; THEN &quot;Missing&quot; ELSE &quot;Present&quot; END' />
+      </column>
+      <column caption='Number of Records' datatype='integer' name='[Calculation_5597200302462181377]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Percentage of Total' datatype='real' default-format='p0.00%' name='[Calculation_5597200302464000002]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_5597200302462181377]) / TOTAL(SUM([Calculation_5597200302462181377]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='contacts_messy.csv' datatype='table' name='[__tableau_internal_object_id__].[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_GB' class='hyper' dbname='/var/folders/1_/tzbrcy31483b4bghphywfms40000gn/T/tableau-temp/#TableauTemp_00ypxsu1wegpcu15x11bz0e43nai.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/17/2025 11:06:39 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>contacts_messy.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Email</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Email]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Email</remote-alias>
+              <ordinal>1</ordinal>
+              <family>contacts_messy.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Source</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Source]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Source</remote-alias>
+              <ordinal>2</ordinal>
+              <family>contacts_messy.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='contacts_messy.csv' id='contacts_messy.csv_78A959557B5E4B8081E1BE093BB14E2E'>
+            <properties context=''>
+              <relation connection='textscan.1u9xqri0q0uevo19qg38d0tblp3c' name='contacts_messy.csv' table='[contacts_messy#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='Name' ordinal='0' />
+                  <column datatype='string' name='Email' ordinal='1' />
+                  <column datatype='string' name='Source' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='contacts_messy' name='federated.0v2626b07yr9ba1gkqjsq00tonet' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v2626b07yr9ba1gkqjsq00tonet'>
+            <column datatype='string' name='[Email]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Source]' role='dimension' type='nominal' />
+            <column-instance column='[Email]' derivation='CountD' name='[ctd:Email:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Source]' derivation='None' name='[none:Source:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0v2626b07yr9ba1gkqjsq00tonet].[ctd:Email:qk]</rows>
+        <cols>[federated.0v2626b07yr9ba1gkqjsq00tonet].[none:Source:nk]</cols>
+      </table>
+      <simple-id uuid='{7B844047-72BB-4FF3-BD1C-BA604B4149B4}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='contacts_messy' name='federated.0v2626b07yr9ba1gkqjsq00tonet' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v2626b07yr9ba1gkqjsq00tonet'>
+            <column caption='Email Status' datatype='string' name='[Calculation_5597200302460637184]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF ISNULL([Email]) OR [Email] = &quot;&quot; THEN &quot;Missing&quot; ELSE &quot;Present&quot; END' />
+            </column>
+            <column caption='Number of Records' datatype='integer' name='[Calculation_5597200302462181377]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Percentage of Total' datatype='real' default-format='p0.00%' name='[Calculation_5597200302464000002]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_5597200302462181377]) / TOTAL(SUM([Calculation_5597200302462181377]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column datatype='string' name='[Email]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_5597200302460637184]' derivation='None' name='[none:Calculation_5597200302460637184:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_5597200302462181377]' derivation='Sum' name='[sum:Calculation_5597200302462181377:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_5597200302464000002]' derivation='User' name='[usr:Calculation_5597200302464000002:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0v2626b07yr9ba1gkqjsq00tonet].[none:Calculation_5597200302460637184:nk]' />
+              <wedge-size column='[federated.0v2626b07yr9ba1gkqjsq00tonet].[sum:Calculation_5597200302462181377:qk]' />
+              <text column='[federated.0v2626b07yr9ba1gkqjsq00tonet].[none:Calculation_5597200302460637184:nk]' />
+              <text column='[federated.0v2626b07yr9ba1gkqjsq00tonet].[usr:Calculation_5597200302464000002:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E85DCF47-5308-4116-8724-2908780EDD48}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5D89D414-487F-4576-9E42-D9F6CB857408}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0v2626b07yr9ba1gkqjsq00tonet].[none:Calculation_5597200302460637184:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DEC57B48-D19D-4B56-B965-51F8C22D702A}' />
+    </window>
+  </windows>
+</workbook>
