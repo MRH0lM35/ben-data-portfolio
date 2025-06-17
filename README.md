@@ -9,7 +9,7 @@ Data cleaning and visualisation projects showcasing Python and Tableau skills fo
 This repository contains my data analysis projects including:
 
 - Python scripts for cleaning and preparing CRM contact data  
-- Tableau dashboards visualizing key CRM metadata issues such as duplicates and missing data  
+- Tableau dashboards visualising key CRM metadata issues such as duplicates and missing data  
 - Documentation tracking project progress and datasets  
 
 ---
@@ -22,7 +22,7 @@ This repository contains my data analysis projects including:
     │   ├── scripts/                   # Python cleaning scripts
     │   ├── output/                    # Output data or reports
     │   └── README.md                  # Project-specific overview
-    ├── tableau-projects/              # Additional Tableau visualization projects
+    ├── tableau-projects/              # Additional Tableau visualisation projects
     ├── README.md                     # This overview file
     └── tracker.md                    # Task and progress tracker
 
@@ -31,7 +31,7 @@ This repository contains my data analysis projects including:
 ## Technologies Used
 
 - Python (data cleaning and scripting)  
-- Tableau (data visualization and dashboarding)  
+- Tableau (data visualisation and dashboarding)  
 - Git & GitHub (version control and portfolio hosting)  
 
 ---
@@ -40,11 +40,7 @@ This repository contains my data analysis projects including:
 
 1. Clone the repo  
 2. Use Python scripts in `project-1-email-cleaner/scripts/` to clean datasets  
-3. Open Tableau workbooks to explore visualizations  
+3. Open Tableau workbooks to explore visualisations  
 4. Update `tracker.md` to keep track of project progress  
 
 ---
-
-## Contact
-
-For inquiries or collaboration, please reach out to [your professional email or website].
